@@ -9,6 +9,7 @@ applications:
   services:
   - cpy-database
   - cpy-service-registry
+  - cpy-circuit-breaker-dashboard
   env:
     ORDERS_URL: http://order-cpy.apps.evans.pal.pivotal.io/orders
 
