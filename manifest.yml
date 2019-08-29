@@ -1,0 +1,23 @@
+---
+applications:
+- name: customer
+  path: applications/customer/build/libs/customer-1.1.0-SNAPSHOT.jar
+  buildpacks:
+    - https://github.com/cloudfoundry/java-buildpack.git
+  routes:
+    - route: customer-cpy.apps.evans.pal.pivotal.io
+  services:
+  - cpy-database
+  - cpy-service-registry
+  env:
+    ORDERS_URL: http://order-cpy.apps.evans.pal.pivotal.io/orders
+
+- name: order
+  path: applications/order/build/libs/order-1.1.0-SNAPSHOT.jar
+  buildpacks:
+    - https://github.com/cloudfoundry/java-buildpack.git
+  routes:
+    - route: order-cpy.apps.evans.pal.pivotal.io
+  services:
+  - cpy-database
+  - cpy-service-registry

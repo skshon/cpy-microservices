@@ -2,3 +2,6 @@ rootProject.name = 'cpy'
 
 include "applications:customer"
 include "applications:order"
+include "platform-services:eureka-server"
+
+include "components:rest-support"

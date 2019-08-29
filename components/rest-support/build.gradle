@@ -1,0 +1,12 @@
+apply from: "../../java.gradle"
+
+dependencies {
+    compile "org.springframework:spring-web:$springVersion"
+    compile "org.springframework:spring-context:$springVersion"
+    compile "org.springframework.cloud:spring-cloud-commons:2.0.2.RELEASE"
+
+    compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+}
